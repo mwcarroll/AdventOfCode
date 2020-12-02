@@ -38,6 +38,7 @@ namespace AdventOfCode
         public bool IsValidB()
         {
             char[] pwdArr = password.ToCharArray();
+
             return pwdArr[rangeOrPosition.Item1 - 1] == charToFind ^ pwdArr[rangeOrPosition.Item2 - 1] == charToFind;
         }
     }
@@ -49,8 +50,9 @@ namespace AdventOfCode
             string[] lines = File.ReadAllLines(@"data\day02.txt");
             Regex regex = new Regex(@"([0-9]*)-([0-9]*) (.): (.*)");
 
-            Console.WriteLine("Valid for Part A: {0}", lines.Where(x => new Password(x, regex).IsValidA()).Count());
-            Console.WriteLine("Valid for Part B: {0}", lines.Where(x => new Password(x, regex).IsValidB()).Count());
+            Console.WriteLine("Day 2:");
+            Console.WriteLine("\tPart A: {0}", lines.Where(x => new Password(x, regex).IsValidA()).Count());
+            Console.WriteLine("\tPart B: {0}", lines.Where(x => new Password(x, regex).IsValidB()).Count());
         }
     }
 }

@@ -5,10 +5,10 @@ using System.Linq;
 
 namespace AdventOfCode
 {
-    class Day01
+    class Day01_alt
     {
 
-        public static IEnumerable<Tuple<int, int>> PairProduct(int[] input)
+        private static IEnumerable<Tuple<int, int>> PairProduct(int[] input)
         {
             foreach(var i in input)
             {
@@ -19,7 +19,7 @@ namespace AdventOfCode
             }
         }
 
-        public static IEnumerable<Tuple<int, int, int>> TrioProduct(int[] input)
+        private static IEnumerable<Tuple<int, int, int>> TrioProduct(int[] input)
         {
             foreach(var i in PairProduct(input))
             {
@@ -30,7 +30,7 @@ namespace AdventOfCode
             }
         }
 
-        static void Main(string[] args)
+        public static void Run(string[] args)
         {
             int[] lines = Array.ConvertAll(File.ReadAllLines(@"input.txt"), int.Parse);
 
@@ -40,9 +40,9 @@ namespace AdventOfCode
             var pairAnswer = pair.Where(x => x.Item1 + x.Item2 == 2020).FirstOrDefault();
             var trioAnswer = trio.Where(x => x.Item1 + x.Item2 + x.Item3 == 2020).FirstOrDefault();
 
-            Console.WriteLine("Part A: {0}", pairAnswer.Item1 * pairAnswer.Item2);
-            Console.WriteLine("Part B: {0}", trioAnswer.Item1 * trioAnswer.Item2 * trioAnswer.Item3);
-            Console.ReadLine();
+            Console.WriteLine("Day 1:");
+            Console.WriteLine("\tPart A: {0}", pairAnswer.Item1 * pairAnswer.Item2);
+            Console.WriteLine("\tPart B: {0}", trioAnswer.Item1 * trioAnswer.Item2 * trioAnswer.Item3);
         }
     }
 }

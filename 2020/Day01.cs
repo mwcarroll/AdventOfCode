@@ -1,51 +1,48 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace AdventOfCode
 {
     class Day01
     {
-        static int? PairProduct(int[] arr, int sum)
+
+        private static IEnumerable<Tuple<int, int>> PairProduct(int[] input)
         {
-            for (int i = 0; i < arr.Length - 1; i++)
+            foreach(var i in input)
             {
-                for (int j = i + 1; j < arr.Length; j++)
+                foreach(var j in input)
                 {
-                    if (arr[i] + arr[j] == sum)
-                    {
-                        return arr[i] * arr[j];
-                    }
+                    yield return Tuple.Create(i, j);
                 }
             }
-
-            return null;
         }
 
-        static int? TrioProduct(int[] arr, int sum)
+        private static IEnumerable<Tuple<int, int, int>> TrioProduct(int[] input)
         {
-            for (int i = 0; i < arr.Length - 1; i++)
+            foreach(var i in PairProduct(input))
             {
-                for (int j = i + 1; j < arr.Length; j++)
+                foreach (var j in input)
                 {
-                    for (int k = j + 1; k < arr.Length; k++)
-                    {
-                        if (arr[i] + arr[j] + arr[k] == sum)
-                        {
-                            return arr[i] * arr[j] * arr[k];
-                        }
-                    }
+                    yield return Tuple.Create(i.Item1, i.Item2, j);
                 }
             }
-
-            return null;
         }
 
-        static void Main(string[] args)
+        public static void Run(string[] args)
         {
-            int[] lines = Array.ConvertAll(File.ReadAllLines(@"input.txt"), int.Parse);
+            int[] lines = Array.ConvertAll(File.ReadAllLines(@"data\day01.txt"), int.Parse);
 
-            Console.WriteLine("Part A: {0}", PairProduct(lines, 2020));
-            Console.WriteLine("Part B: {0}", TrioProduct(lines, 2020));
+            IEnumerable<Tuple<int, int>> pair = PairProduct(lines);
+            IEnumerable<Tuple<int, int, int>> trio = TrioProduct(lines);
+
+            var pairAnswer = pair.Where(x => x.Item1 + x.Item2 == 2020).FirstOrDefault();
+            var trioAnswer = trio.Where(x => x.Item1 + x.Item2 + x.Item3 == 2020).FirstOrDefault();
+
+            Console.WriteLine("Day 1:");
+            Console.WriteLine("\tPart A: {0}", pairAnswer.Item1 * pairAnswer.Item2);
+            Console.WriteLine("\tPart B: {0}", trioAnswer.Item1 * trioAnswer.Item2 * trioAnswer.Item3);
         }
     }
 }
