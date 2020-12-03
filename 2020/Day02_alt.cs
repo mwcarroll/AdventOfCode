@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -9,10 +8,8 @@ namespace AdventOfCode_Alternate
     class Day02_alt
     {
 
-        public static void Run(string[] args)
+        public static void Run(string[] lines)
         {
-            string[] lines = File.ReadAllLines(@"data\day02.txt");
-
             IEnumerable<string[]> passwords = lines.ToList().Select(x =>
             {
                 return Regex.Split(x.Trim(), @" |-|: ");

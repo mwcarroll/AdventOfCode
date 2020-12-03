@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -45,9 +44,8 @@ namespace AdventOfCode
     class Day02
     {
 
-        public static void Run(string[] args)
+        public static void Run(string[] lines)
         {
-            string[] lines = File.ReadAllLines(@"data\day02.txt");
             Regex regex = new Regex(@"([0-9]*)-([0-9]*) (.): (.*)");
 
             Console.WriteLine("Day 2:");

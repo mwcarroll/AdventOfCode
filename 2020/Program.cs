@@ -1,11 +1,14 @@
-﻿namespace AdventOfCode
+﻿using System.IO;
+
+namespace AdventOfCode
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Day01.Run(args);
-            Day02.Run(args);
+            string[] lines = File.ReadAllLines(@"data\day03.txt");
+
+            Day03.Run(args);
         }
     }
 }

@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 
 namespace AdventOfCode_Alternate
@@ -30,12 +29,12 @@ namespace AdventOfCode_Alternate
             }
         }
 
-        public static void Run(string[] args)
+        public static void Run(string[] lines)
         {
-            int[] lines = Array.ConvertAll(File.ReadAllLines(@"input.txt"), int.Parse);
+            int[] linesAsInts = Array.ConvertAll(lines, int.Parse);
 
-            IEnumerable<Tuple<int, int>> pair = PairProduct(lines);
-            IEnumerable<Tuple<int, int, int>> trio = TrioProduct(lines);
+            IEnumerable<Tuple<int, int>> pair = PairProduct(linesAsInts);
+            IEnumerable<Tuple<int, int, int>> trio = TrioProduct(linesAsInts);
 
             var pairAnswer = pair.Where(x => x.Item1 + x.Item2 == 2020).FirstOrDefault();
             var trioAnswer = trio.Where(x => x.Item1 + x.Item2 + x.Item3 == 2020).FirstOrDefault();
