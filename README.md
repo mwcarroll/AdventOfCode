@@ -7,3 +7,4 @@ https://adventofcode.com/2020
 * [Day 2: Password Philosophy](2020/Day02.cs)
   * [Alternate Solution](2020/Day02_alt.cs)
 * [Day 3: Toboggan Trajectory](2020/Day03.cs)
+* [Day 4: Passport Processing](2020/Day04.cs)
