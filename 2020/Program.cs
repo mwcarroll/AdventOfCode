@@ -6,7 +6,7 @@ namespace AdventOfCode
     {
         static void Main(string[] args)
         {
-            Day05.Run(File.ReadAllLines(@"data\day05.txt"));
+            Day06.Run(File.ReadAllLines(@"data\day06.txt"));
         }
     }
 }

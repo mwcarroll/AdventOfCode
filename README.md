@@ -9,3 +9,4 @@ https://adventofcode.com/2020
 * [Day 3: Toboggan Trajectory](2020/Day03.cs)
 * [Day 4: Passport Processing](2020/Day04.cs)
 * [Day 5: Binary Boarding](2020/Day05.cs)
+* [Day 6: Custom Customs](2020/Day06.cs)
