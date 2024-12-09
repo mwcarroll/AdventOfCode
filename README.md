@@ -1,13 +1,16 @@
-# Advent of Code - 2020
-https://adventofcode.com/2020
+# Advent of Code - 2024
+https://adventofcode.com/2024
 
 ## Solutions
-* [Day 1: Report Repair](2020/Day01.cs)
-  * [Alternate Solution](2020/Day01_alt.cs)
-* [Day 2: Password Philosophy](2020/Day02.cs)
-  * [Alternate Solution](2020/Day02_alt.cs)
-* [Day 3: Toboggan Trajectory](2020/Day03.cs)
-* [Day 4: Passport Processing](2020/Day04.cs)
-* [Day 5: Binary Boarding](2020/Day05.cs)
-* [Day 6: Custom Customs](2020/Day06.cs)
-* [Day 7: Handy Haversacks](2020/Day07.cs)
+* ### Day 1: Historian Hysteria
+  * Code: [Day01.cs](2024/Day01.cs)
+  * Data: [day01.txt](2024/data/day01.txt)
+  * Solutions (with execution times):
+    ```
+    Part One (Execution Time) 00:00:00.0072817
+    Part One (Answer): 2113135
+    Part Two (Execution Time) 00:00:00.0036160
+    Part Two (Answer): 19097157
+    Part Two Alt (Execution Time) 00:00:00.0404970
+    Part Two Alt (Answer): 19097157
+    ```
