@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AdventOfCode_Alternate
+namespace AdventOfCode._2020
 {
     class Day01_alt
     {

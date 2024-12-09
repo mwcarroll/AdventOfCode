@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace AdventOfCode
+namespace AdventOfCode._2020
 {
     class Password
     {

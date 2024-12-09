@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace AdventOfCode_Alternate
+namespace AdventOfCode._2020
 {
     class Day02_alt
     {

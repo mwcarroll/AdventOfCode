@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Linq;
 using System.Drawing;
+using System.Linq;
 
-namespace AdventOfCode
+namespace AdventOfCode._2020
 {
     class Day03
     {
