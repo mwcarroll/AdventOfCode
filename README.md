@@ -24,3 +24,13 @@ https://adventofcode.com/2024
     Part Two (Execution Time): 00:00:00.0035776
     Part Two (Answer): 514
     ```
+* ### Day 3: Mull It Over
+  * Code [Day03.cs](2024/Day03.cs)
+  * Data [day03.txt](2024/data/day03.txt)
+  * Solutions (with execution times):
+    ```
+    Part One (Execution Time): 00:00:00.0192892
+    Part One (Answer): 188116424
+    Part Two (Execution Time): 00:00:00.0029739
+    Part Two (Answer): 104245808
+    ```
